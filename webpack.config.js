@@ -2,9 +2,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
-const BUILD_DIR = path.resolve(__dirname, './build');
+const BUILD_DIR = path.resolve(__dirname, './public/build');
 
 module.exports = {
+  mode: 'development',
   entry: './client/index.js',
   output: {
     path: BUILD_DIR,
