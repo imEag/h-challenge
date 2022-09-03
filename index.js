@@ -10,10 +10,10 @@ db()
 
         app.listen(port, () => {
             console.log(`Listening to port ${port}`);
-        })
+        });
     })
     .catch(err => {
         console.log(err);
-    })
+    });
 
 
