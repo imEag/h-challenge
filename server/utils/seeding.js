@@ -37,3 +37,4 @@ console.log(process.argv);
 
 if (process.argv[2] === "-i") { importBuildings() }
 else if (process.argv[2] === "-d") { deleteBuildings() }
+else { console.log('Incorrect argument') }
