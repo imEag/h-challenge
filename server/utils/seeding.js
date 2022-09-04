@@ -6,7 +6,7 @@ db()
     .then(res => console.log('Connected to DB'))
     .catch(err => console.error(`An error ocurred while connecting to DB ${err}`));
 
-const Building = require('../building/buildingModel');
+const Building = require('../building/buildingSchema');
 
 const buildingsData = JSON.parse(fs.readFileSync(`${__dirname}/../seeds/buildings.json`, 'utf-8'));
 
