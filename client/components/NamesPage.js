@@ -7,8 +7,8 @@ const NamesPage = () => {
         <div className="namesPage">
             <h2>Awesome! Let's get started with the basics.</h2>
             <form>
-                <ReactiveInput label="My input 1"></ReactiveInput>
-                <ReactiveInput label="My input 2"></ReactiveInput>
+                <ReactiveInput label="First Name"></ReactiveInput>
+                <ReactiveInput label="Last Name"></ReactiveInput>
             </form>
             <Button>Next</Button>
             <p>Step 1 of 4</p>
