@@ -15,6 +15,8 @@ const AddressPage = (props) => {
                 </form>
             </div>
             <AddressCard></AddressCard>
+            <AddressCard></AddressCard>
+            <AddressCard></AddressCard>
             <div className="bottom--container">
                 <Button>Yes!</Button>
                 <p>Step 2 of 4</p>
