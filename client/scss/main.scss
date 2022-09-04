@@ -1,5 +1,6 @@
 @import './abstracts/config';
 @import './base/base';
+@import './base/mixins';
 
 @import './components/button';
 @import './components/input';
@@ -12,14 +13,12 @@
 
 
 body {
+    @include flexCenter2Axis;
     background-color: #FFFFFF;
     min-height: 100vh;
     color: $secondColor;
     font-family: $firstFont;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {

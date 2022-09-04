@@ -1,0 +1,32 @@
+@mixin blueShadowBig {
+    box-shadow: 0 10px 20px rgb(57 144 229 / 19%), 0 6px 6px rgb(57 144 229 / 23%);
+}
+
+@mixin blueShadowSmall {
+    box-shadow: 0 10px 20px rgb(57 144 229 / 10%), 0 6px 6px rgb(57 144 229 / 15%);
+}
+
+@mixin flexCenter2Axis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnCentered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnSpaceBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grayThinBorder {
+    border: 0.1rem solid $thirdColor;
+    border-radius: 0.8rem;
+}

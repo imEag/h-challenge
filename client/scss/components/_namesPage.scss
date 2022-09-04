@@ -1,16 +1,10 @@
 .namesPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexColumnSpaceBetween;
     gap: 12rem;
     width: 100%;
 
     & .upper--container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include flexColumnSpaceBetween;
         gap: 4rem;
 
         & h2 {
@@ -21,11 +15,9 @@
         }
     
         & form {
+            @include flexColumnSpaceBetween;
+            gap: 1.4rem;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
         }
     }
 

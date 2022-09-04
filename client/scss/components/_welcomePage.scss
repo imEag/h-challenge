@@ -1,16 +1,10 @@
 .welcomePage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexColumnSpaceBetween;
     gap: 10rem;
     width: 100%;
 
     & .upper--container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include flexColumnSpaceBetween;
         gap: 6rem;
 
         & h1 {

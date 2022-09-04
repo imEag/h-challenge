@@ -1,13 +1,9 @@
 .serviceCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCentered;
+    @include grayThinBorder;
     gap: 3rem;
     width: 100%;
     padding: 3rem 0;
-    border: 0.1rem solid $thirdColor;
-    border-radius: 0.8rem;
 
     & .title--container {
         & h3 {
@@ -30,9 +26,7 @@
     }
 
     & .number {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter2Axis;
         color: $firstColor;
         font-size: $bigFont;
         font-weight: 700;

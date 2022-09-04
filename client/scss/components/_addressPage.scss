@@ -1,8 +1,5 @@
 .addressPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexColumnSpaceBetween;
     gap: 12rem;
 
     & h2 {
@@ -13,12 +10,9 @@
     }
 
     & .upper--container {
+        @include flexColumnSpaceBetween;
         position: relative;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         gap: 12rem;
 
         & form {
@@ -36,13 +30,10 @@
         }
 
         & .card--container {
+            @include flexColumnSpaceBetween;
             position: absolute;
             top: 95%;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-content: center;
             gap: 1rem;
         }
     }

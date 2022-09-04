@@ -1,8 +1,6 @@
 .servicePage {
-    display: flex;
+    @include flexCenter2Axis;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 12rem;
 
     & h2 {
