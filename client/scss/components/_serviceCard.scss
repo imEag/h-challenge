@@ -1,0 +1,60 @@
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 3rem 0;
+    border: 0.1rem solid $thirdColor;
+    border-radius: 0.8rem;
+
+    & .title--container {
+        & h3 {
+            font-family: $secondFont;
+            color: $secondColor;
+            font-size: $mediumFont;
+        }
+
+        & p {
+            font-family: $firstFont;
+            color: $secondColor;
+            font-size: $smallerFont;
+        }
+    }
+
+    & .x {
+        font-family: $firstFont;
+        color: #beb502;
+        font-size: $smallFont;
+    }
+
+    & .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $firstColor;
+        font-size: $bigFont;
+        font-weight: 700;
+        margin-left: 0rem;
+
+        &::before {
+            content: '$';
+            font-size: $mediumFont;
+            align-self: center;
+        }
+
+        &::after {
+            content: '/mo';
+            font-size: $smallFont;
+            align-self: flex-end;
+        }
+    }
+
+    & .check {
+        border: 0.1rem solid $thirdColor;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    }
+}
