@@ -1,7 +1,15 @@
 .servicePage {
     @include flexCenter2Axis;
     flex-direction: column;
-    gap: 12rem;
+    gap: 6rem;
+
+    @media only screen and (min-width: 420px) {
+        & {
+            gap: 12rem;
+            width: 20rem;
+            padding: 3rem 0;
+        }
+    }
 
     & h2 {
         font-family: $secondFont;
@@ -10,16 +18,9 @@
     }
 
     & .service--container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
-        width: 100%;
-
-        @media only screen and (min-width: 400px) {
-            & {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        @include flexCenter2Axis;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 
     & .bottom--container p {

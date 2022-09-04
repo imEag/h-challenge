@@ -1,9 +1,18 @@
 .serviceCard {
     @include flexColumnCentered;
     @include grayThinBorder;
-    gap: 3rem;
-    width: 100%;
-    padding: 3rem 0;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 18rem;
+    padding: 2rem 0;
+    
+    @media only screen and (min-width: 440px) {
+        & {
+            gap: 2rem;
+            width: 20rem;
+            padding: 3rem 0;
+        }
+    }
 
     & .title--container {
         & h3 {
@@ -48,7 +57,7 @@
     & .check {
         border: 0.1rem solid $thirdColor;
         border-radius: 50%;
-        height: 3rem;
-        width: 3rem;
+        height: 2.5rem;
+        width: 2.5rem;
     }
 }

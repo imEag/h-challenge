@@ -11,7 +11,7 @@ const ServicePage = () => {
                 <ServiceCard></ServiceCard>
             </div>
             <div className="bottom--container">
-                <Button>Next</Button>
+                <Button>I am ready!</Button>
                 <p>Step 3 of 4</p>
             </div>
         </div>
