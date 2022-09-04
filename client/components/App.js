@@ -13,8 +13,6 @@ const App = () => {
 
     return(
         <>
-
-            <h2>from App</h2>
             <WelcomePage></WelcomePage>
             {/* <NamesPage></NamesPage>
             <AddressPage></AddressPage>

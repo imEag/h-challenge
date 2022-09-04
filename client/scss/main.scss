@@ -1,13 +1,18 @@
 @import './abstracts/config';
 @import './base/base';
 
+@import './components/button';
 @import './components/welcomePage';
 
+
 body {
-    color: $firstColor;
-    background-color: #9cdcff;
-    width: 100vw;
+    background-color: #FFFFFF;
     min-height: 100vh;
+    width: 100vw;
+    color: $secondColor;
+    font-family: $firstFont;
+    font-size: $bigFont;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;

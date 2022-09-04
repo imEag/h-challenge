@@ -1,0 +1,18 @@
+
+.btn {
+    background-color: $firstColor;
+    color: #FFFFFF;
+    font-family: $thirdFont;
+    font-size: $smallFont;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 2.8rem 12rem;
+    border-radius: .5rem;
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $altColor;
+    }
+}

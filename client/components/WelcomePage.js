@@ -1,6 +1,12 @@
+import Button from "./Button";
+
 const WelcomePage = () => {
     return (
-        <h2>WelcomePage component</h2>
+    <div className="welcomePage">
+        <h1>The Best TV service around!</h1>
+        <h2>Are you ready to enjoy ultra-best service?</h2>
+        <Button>Let's do It!</Button>
+    </div>
     );
 }
 

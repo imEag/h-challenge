@@ -1,0 +1,25 @@
+.welcomePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    & h1 {
+        font-size: $bigFont;
+        color: $firstColor;
+        font-family: $secondFont;
+        font-weight: 700;
+    }
+
+    & h2 {
+        font-size: $mediumFont;
+        color: $secondColor;
+        font-weight: 400;
+        margin-top: 4rem;
+    }
+    
+    & button {
+        margin-top: 8rem;
+    }
+}
