@@ -1,3 +1,4 @@
+import AddressCard from "./utils/AddressCard";
 import Button from "./utils/Button";
 import Input from "./utils/Input";
 
@@ -13,6 +14,7 @@ const AddressPage = (props) => {
                     <p>I can't find my address</p>
                 </form>
             </div>
+            <AddressCard></AddressCard>
             <div className="bottom--container">
                 <Button>Yes!</Button>
                 <p>Step 2 of 4</p>

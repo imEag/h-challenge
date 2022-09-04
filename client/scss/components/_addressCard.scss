@@ -1,0 +1,41 @@
+.addressCard {
+    width: 100%;
+    background-color: $fourthColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 14rem;
+    border: 0.1rem solid $thirdColor;
+    border-radius: 0.8rem;
+
+    & .left--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: $smallFont;
+
+        & h3 {
+            font-family: $secondFont;
+            text-align: left;
+            color: $firstColor;
+            font-weight: 400;
+        }
+
+        & p {
+            text-align: left;
+            font-family: $firstFont;
+            color: $secondColor;
+            font-weight: 400;
+        }
+    }
+
+    & Button {
+        margin: 0;
+        padding: 3rem 4rem;
+        font-size: $smallFont;
+    }
+}

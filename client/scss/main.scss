@@ -6,6 +6,7 @@
 @import './components/welcomePage';
 @import './components/namesPage';
 @import './components/addressPage';
+@import './components/addressCard';
 
 
 body {
@@ -21,21 +22,21 @@ body {
 }
 
 .container {
-    width: 96%;
+    width: 98%;
     margin: 0 auto;
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 500px) {
     .container {
-        width: 90%;
+        width: 94%;
         margin: 0 auto;
     }
 }
 
 
-@media (min-width: 700px) {
+@media only screen and (min-width: 760px) {
     .container {
-        width: 68rem;
+        width: 75rem;
         margin: 0 auto;
     }
 }
