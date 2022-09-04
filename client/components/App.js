@@ -13,9 +13,10 @@ const App = () => {
 
     return (
         <>
-            <AddressPage name="Cristian"></AddressPage>
-            {/* <WelcomePage></WelcomePage>
-            <NamesPage></NamesPage>
+            <AddressPage name="Cristian" className="container"></AddressPage>
+            {/* 
+            <NamesPage className="container"></NamesPage>
+            <WelcomePage></WelcomePage>
             <ServicePage></ServicePage>
             <SubscribePage></SubscribePage> */}
         </>
