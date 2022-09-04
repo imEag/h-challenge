@@ -1,4 +1,4 @@
-import ReactiveInput from "./utils/ReactiveInput";
+import Input from "./utils/Input";
 import Button from "./utils/Button";
 
 const NamesPage = () => {
@@ -7,8 +7,8 @@ const NamesPage = () => {
         <div className="namesPage">
             <h2>Awesome! Let's get started with the basics.</h2>
             <form>
-                <ReactiveInput label="First Name"></ReactiveInput>
-                <ReactiveInput label="Last Name"></ReactiveInput>
+                <Input label="First Name"></Input>
+                <Input label="Last Name"></Input>
             </form>
             <Button>Next</Button>
             <p>Step 1 of 4</p>

@@ -1,0 +1,41 @@
+.addressPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
+    & h2 {
+        font-size: $mediumFont;
+        font-family: $secondFont;
+        color: $secondColor;
+        font-weight: 400;
+    }
+
+    & .address__data--container {
+        
+        & .data__input--container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        & p{
+            font-size: $smallerFont;
+            text-transform: none;
+            color: $secondColor;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    
+    & button {
+        margin-top: 8rem;
+    }
+
+    & p {
+        color: $thirdColor;
+        font-size: $smallerFont;
+        text-transform: uppercase;
+    }
+}

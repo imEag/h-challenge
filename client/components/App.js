@@ -7,18 +7,18 @@ import ServicePage from './ServicePage';
 import SubscribePage from './SubscribePage';
 
 const App = () => {
-    
+
     const [page, setPage] = useState(0);
     const pages = [];
 
-    return(
+    return (
         <>
-        <NamesPage></NamesPage>
+            <AddressPage name="Cristian"></AddressPage>
             {/* <WelcomePage></WelcomePage>
-            <AddressPage></AddressPage>
+            <NamesPage></NamesPage>
             <ServicePage></ServicePage>
             <SubscribePage></SubscribePage> */}
-        </>    
+        </>
     )
 }
 
