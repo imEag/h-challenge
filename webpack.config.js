@@ -15,10 +15,17 @@ module.exports = {
     rules: [
       {
         use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/react']
-            }
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/react',
+                {
+                  runtime: 'automatic'
+                }
+              ]
+            ]
+          }
         },
         test: /\.(js|jsx)$/,
         exclude: /node_modules/
