@@ -1,0 +1,42 @@
+.subscribePage {
+    @include flexColumnSpaceBetween;
+    gap: 12rem;
+    width: 100%;
+
+    & .upper--container {
+        @include flexColumnSpaceBetween;
+        gap: 4rem;
+
+        & .upper__title--container {
+
+            & h2 {
+                font-size: $mediumFont;
+                font-family: $secondFont;
+                color: $secondColor;
+                font-weight: 700;
+            }
+
+            & p {
+                font-size: $smallFont;
+                font-family: $secondFont;
+                color: $secondColor;
+                font-weight: 700;
+            }
+        }
+
+
+        & form {
+            @include flexColumnSpaceBetween;
+            gap: 1.4rem;
+            width: 100%;
+        }
+    }
+
+
+    & .bottom--container p {
+        color: $thirdColor;
+        font-size: $smallerFont;
+        text-transform: uppercase;
+        margin-top: 2rem;
+    }
+}
