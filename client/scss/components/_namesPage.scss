@@ -1,0 +1,24 @@
+.namesPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
+    & h2 {
+        font-size: $mediumFont;
+        font-family: $secondFont;
+        color: $secondColor;
+        font-weight: 400;
+    }
+    
+    & button {
+        margin-top: 8rem;
+    }
+
+    & p {
+        color: $thirdColor;
+        font-size: $smallerFont;
+        text-transform: uppercase;
+    }
+}

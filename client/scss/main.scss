@@ -2,7 +2,9 @@
 @import './base/base';
 
 @import './components/button';
+@import './components/reactiveInput';
 @import './components/welcomePage';
+@import './components/namesPage';
 
 
 body {
@@ -11,7 +13,7 @@ body {
     width: 100vw;
     color: $secondColor;
     font-family: $firstFont;
-    font-size: $bigFont;
+    font-size: $mediumFont;
     text-align: center;
     display: flex;
     justify-content: center;
