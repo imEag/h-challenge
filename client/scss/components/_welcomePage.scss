@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 12rem;
+    gap: 10rem;
     width: 100%;
 
     & .upper--container {
@@ -25,10 +25,5 @@
             color: $secondColor;
             font-weight: 400;
         }
-    }
-
-
-    & button {
-        margin-top: 6rem;
     }
 }
