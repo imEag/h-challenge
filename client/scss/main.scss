@@ -1,0 +1,14 @@
+@import './abstracts/config';
+@import './base/base';
+
+@import './components/welcomePage';
+
+body {
+    color: $firstColor;
+    background-color: #9cdcff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
