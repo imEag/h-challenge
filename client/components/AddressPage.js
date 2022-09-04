@@ -13,10 +13,12 @@ const AddressPage = (props) => {
                     <Input label="Apt #" placeholder="Apt #"></Input>
                     <p>I can't find my address</p>
                 </form>
+                <div className="card--container">
+                    <AddressCard></AddressCard>
+                    <AddressCard></AddressCard>
+                    <AddressCard></AddressCard>
+                </div>
             </div>
-            <AddressCard></AddressCard>
-            <AddressCard></AddressCard>
-            <AddressCard></AddressCard>
             <div className="bottom--container">
                 <Button>Yes!</Button>
                 <p>Step 2 of 4</p>
