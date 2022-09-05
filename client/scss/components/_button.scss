@@ -1,11 +1,8 @@
 
 .btn {
     @include blueShadowSmall;
+    @include font ($smallFont, $thirdFont, #FFFFFF, 400);
     background-color: $firstColor;
-    color: #FFFFFF;
-    font-family: $thirdFont;
-    font-size: $smallFont;
-    font-weight: 400;
     text-transform: uppercase;
     padding: 2.2rem 10rem;
     border-radius: .5rem;

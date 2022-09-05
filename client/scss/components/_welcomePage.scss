@@ -8,16 +8,11 @@
         gap: 6rem;
 
         & h1 {
-            font-size: $bigFont;
-            color: $firstColor;
-            font-family: $secondFont;
-            font-weight: 700;
+            @include font($bigFont, $secondFont, $firstColor, 700);
         }
 
         & h2 {
-            font-size: $mediumFont;
-            color: $secondColor;
-            font-weight: 400;
+            @include font($size: $mediumFont, $color: $secondColor);
         }
     }
 }

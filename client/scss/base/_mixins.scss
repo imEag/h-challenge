@@ -19,6 +19,13 @@
     align-items: center;
 }
 
+@mixin flexRowSpaceBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin flexColumnSpaceBetween {
     display: flex;
     flex-direction: column;
@@ -30,3 +37,11 @@
     border: 0.1rem solid $thirdColor;
     border-radius: 0.8rem;
 }
+
+@mixin font($size: $smallFont, $family: $firstFont, $color: $secondColor, $weight: 400) {
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    font-weight: $weight;
+}
+

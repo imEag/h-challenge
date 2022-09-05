@@ -1,9 +1,7 @@
 .addressCard {
     @include blueShadowBig;
     @include grayThinBorder;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexRowSpaceBetween;
     width: 100%;
     background-color: $fourthColor;
     gap: .8rem;
@@ -18,11 +16,8 @@
         gap: 0.8rem;
 
         & h3 {
-            font-size: $smallerFont;
-            font-family: $secondFont;
+            @include font($smallerFont, $secondFont, $firstColor, 400);
             text-align: left;
-            color: $firstColor;
-            font-weight: 400;
 
             @media only screen and (min-width: 320px) {
                 & {
@@ -32,20 +27,16 @@
         }
 
         & p {
+            @include font($smallerFont, $firstFont, $secondColor, 400);
             text-align: left;
-            font-family: $firstFont;
-            color: $secondColor;
-            font-weight: 400;
-            font-size: $smallerFont;
         }
     }
 
     & Button {
+        @include font($size: $smallerFont, $weight: 500, $color: #FFFFFF);
         margin: 0;
         padding: 0rem 2rem;
         height: 90%;
-        font-size: $smallerFont;
-        font-weight: 500;
 
         @media only screen and (min-width: 320px) {
             & {
