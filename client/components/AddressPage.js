@@ -1,10 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PageContext } from "./context/PageContext";
 import { UserDataContext } from "./context/UserDataContext";
 
 import AddressCard from "./utils/AddressCard";
 import Button from "./utils/Button";
 import Input from "./utils/Input";
+
+import axios from "axios";
 
 const AddressPage = (props) => {
 
@@ -13,10 +15,21 @@ const AddressPage = (props) => {
 
     const [address, setAddress] = useState("");
     const [aptNum, setAptNum] = useState("");
+    const [buildings, setBuildings] = useState([])
+
+    const getBuildings = async () => {
+
+        let params = { query: 'st' }
+        let result = await axios.get('http://localhost:5000/server/buildings', { params });
+        
+        setBuildings(result.data.data);
+        console.log(result.data.data);
+
+    };
 
     const handleSubmit = evt => {
         evt.preventDefault();
-        
+
         let newData = { address, aptNum };
 
         setUserData(userData => ({
@@ -26,6 +39,10 @@ const AddressPage = (props) => {
 
         setPage(page + 1);
     }
+
+    useEffect(() => {
+        getBuildings();
+    }, []);
 
     return (
         <div className="addressPage container">
