@@ -6,6 +6,7 @@
     & .upper--container {
         @include flexColumnSpaceBetween;
         gap: 4rem;
+        width: 100%;
 
         & h2 {
             @include font($mediumFont, $secondFont, $secondColor, 700);
