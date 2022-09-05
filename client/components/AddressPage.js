@@ -24,8 +24,6 @@ const AddressPage = (props) => {
             ...newData
         }));
 
-        console.log(userData);
-
         setPage(page + 1);
     }
 

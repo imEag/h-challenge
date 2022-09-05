@@ -8,7 +8,13 @@ const ServiceCard = (props) => {
             </div>
             <p className="x">x</p>
             <div className="number">{props.price || "Not available"}</div>
-            <input required type="radio" value={props.price || 0} name={props.radioName}></input>
+            <input
+                onChange={props.onChange}
+                required
+                type="radio"
+                value={props.service || "Unknown"}
+                name={props.radioName}>
+            </input>
         </div>
     )
 }
