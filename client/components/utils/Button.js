@@ -1,6 +1,6 @@
 const Button = (props) => {
     return (
-        <button form={props.form} className="btn">{props.children}</button>
+        <button onClick={props.onClick} form={props.form} className="btn">{props.children}</button>
     )
 }
 

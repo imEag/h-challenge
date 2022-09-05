@@ -4,7 +4,7 @@ export const UserDataContext = createContext();
 
 const User = {
     name: "",
-    lastname: "",
+    lastName: "",
     email: "",
     phoneNumber: "",
     address: "",
