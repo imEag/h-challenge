@@ -1,0 +1,18 @@
+.summaryPage {
+    @include flexColumnSpaceBetween;
+    gap: 10rem;
+    width: 100%;
+
+    & .upper--container {
+        @include flexColumnSpaceBetween;
+        gap: 2rem;
+
+        & h2 {
+            @include font($size: $bigFont, $family: $secondFont, $color: $firstColor, $weight: 700);
+        }
+
+        & p {
+            @include font($size: $smallFont, $color: $secondColor);
+        }
+    }
+}
