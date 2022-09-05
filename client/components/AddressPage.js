@@ -1,30 +1,29 @@
 import { useContext, useEffect, useState } from "react";
 import { PageContext } from "./context/PageContext";
 import { UserDataContext } from "./context/UserDataContext";
+import axios from "axios";
 
 import AddressCard from "./utils/AddressCard";
 import Button from "./utils/Button";
 import Input from "./utils/Input";
 
-import axios from "axios";
-
 const AddressPage = (props) => {
-
     const { page, setPage } = useContext(PageContext);
     const { userData, setUserData } = useContext(UserDataContext);
 
     const [address, setAddress] = useState("");
     const [aptNum, setAptNum] = useState("");
-    const [buildings, setBuildings] = useState([])
+    const [query, setQuery] = useState("");
+    const [buildings, setBuildings] = useState([]);
 
-    const getBuildings = async () => {
-
-        let params = { query: 'st' }
-        let result = await axios.get('http://localhost:5000/server/buildings', { params });
-        
-        setBuildings(result.data.data);
-        console.log(result.data.data);
-
+    const fetchBuildings = async query => {
+        let params = { query };
+        try {
+            let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
+            setBuildings(data.data);
+        } catch (error) {
+            console.log(error)
+        }
     };
 
     const handleSubmit = evt => {
@@ -40,9 +39,14 @@ const AddressPage = (props) => {
         setPage(page + 1);
     }
 
+    const handleAddressChange = (evt) => {
+        setAddress(evt.target.value);
+        setQuery(evt.target.value);
+        query ? fetchBuildings(query) : null;
+    }
+
     useEffect(() => {
-        getBuildings();
-    }, []);
+    }, [query])
 
     return (
         <div className="addressPage container">
@@ -51,7 +55,7 @@ const AddressPage = (props) => {
                 <form id="addressForm" onSubmit={handleSubmit}>
                     <Input
                         value={address}
-                        onChange={evt => setAddress(evt.target.value)}
+                        onChange={handleAddressChange}
                         type="text"
                         id="address"
                         name="address"
@@ -75,11 +79,23 @@ const AddressPage = (props) => {
                     </Input>
                     <p>I can't find my address</p>
                 </form>
-                <div className="card--container">
-                    {/* <AddressCard></AddressCard>
-                    <AddressCard></AddressCard>
-                    <AddressCard></AddressCard> */}
-                </div>
+                {
+                    query ?
+                        <div className="card--container">
+                            {
+                                buildings.map(el => {
+                                    return (
+                                        <div key={el._id}>
+                                            <h1>{el.name}</h1>
+                                            <p>{el.addres}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                        : null
+                }
+
             </div>
             <div className="bottom--container">
                 <Button form="addressForm" id="submit">Yes!</Button>
