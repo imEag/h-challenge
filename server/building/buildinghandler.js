@@ -1,8 +1,7 @@
 const buildingService = require('./buildingService');
 
 const buildingHandler = async (req, res) => {
-    const query = req.body.query;
-
+    const { query } = req.query;
     if (!query) return res.status(400).send({ message: "Invalid query", data: null });
 
     try {
