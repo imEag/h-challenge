@@ -1,12 +1,32 @@
+import { useContext, useState } from "react";
+import { PageContext } from "./context/PageContext";
+import { UserDataContext } from "./context/UserDataContext";
+
 import AddressCard from "./utils/AddressCard";
 import Button from "./utils/Button";
 import Input from "./utils/Input";
 
 const AddressPage = (props) => {
 
+    const { page, setPage } = useContext(PageContext);
+    const { userData, setUserData } = useContext(UserDataContext);
+
+    const [address, setAddress] = useState("");
+    const [aptNum, setAptNum] = useState("");
+
     const handleSubmit = evt => {
         evt.preventDefault();
-        console.log('submitted');
+        
+        let newData = { address, aptNum };
+
+        setUserData(userData => ({
+            ...userData,
+            ...newData
+        }));
+
+        console.log(userData);
+
+        setPage(page + 1);
     }
 
     return (
@@ -14,8 +34,28 @@ const AddressPage = (props) => {
             <div className="upper--container">
                 <h2>Pleasure to meet you, {props.name}!<br />What is your install address?</h2>
                 <form id="addressForm" onSubmit={handleSubmit}>
-                    <Input type="text" id="address" name="address" required={true} label="Please type in your street address" placeholder="Street Address, City, State"></Input>
-                    <Input type="text" id="aptNum" name="aptNum" required={true} label="Apt #" placeholder="Apt #"></Input>
+                    <Input
+                        value={address}
+                        onChange={evt => setAddress(evt.target.value)}
+                        type="text"
+                        id="address"
+                        name="address"
+                        required={true}
+                        label="Please type in your street address"
+                        placeholder="Street Address, City, State">
+
+                    </Input>
+                    <Input
+                        value={aptNum}
+                        onChange={evt => setAptNum(evt.target.value)}
+                        type="text"
+                        id="aptNum"
+                        name="aptNum"
+                        required={true}
+                        label="Apt #"
+                        placeholder="Apt #">
+
+                    </Input>
                     <p>I can't find my address</p>
                 </form>
                 <div className="card--container">

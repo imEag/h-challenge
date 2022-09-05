@@ -15,9 +15,13 @@ const NamesPage = () => {
 
     const handleSubmit = evt => {
         evt.preventDefault();
+        
+        let newData = { name, lastName };
 
-        setUserData(userData["name"] = name);
-        setUserData(userData["lastName"] = lastName);
+        setUserData(userData => ({
+            ...userData,
+            ...newData
+        }));
 
         setPage(page + 1);
     }
