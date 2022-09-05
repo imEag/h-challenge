@@ -9,8 +9,8 @@ const AddressPage = (props) => {
             <div className="upper--container">
                 <h2>Pleasure to meet you, {props.name}!<br />What is your install address?</h2>
                 <form>
-                    <Input label="Please type in your street address" placeholder="Street Address, City, State"></Input>
-                    <Input label="Apt #" placeholder="Apt #"></Input>
+                    <Input type="text" id="address" name="address" required={true} label="Please type in your street address" placeholder="Street Address, City, State"></Input>
+                    <Input type="text" id="aptNum" name="aptNum" required={true} label="Apt #" placeholder="Apt #"></Input>
                     <p>I can't find my address</p>
                 </form>
                 <div className="card--container">

@@ -8,8 +8,8 @@ const NamesPage = () => {
             <div className="upper--container">
                 <h2>Awesome! Let's get started with the basics.</h2>
                 <form>
-                    <Input label="First Name"></Input>
-                    <Input label="Last Name"></Input>
+                    <Input type="text" id="name" name="name" required={true} label="First Name"></Input>
+                    <Input type="text" id="lastname" name="lastname" label="Last Name"></Input>
                 </form>
             </div>
             <div className="bottom--container">
