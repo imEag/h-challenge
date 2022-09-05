@@ -12,17 +12,11 @@
             gap: 3rem;
 
             & h2 {
-                font-size: $mediumFont;
-                font-family: $secondFont;
-                color: $secondColor;
-                font-weight: 700;
+                @include font ($mediumFont, $secondFont, $secondColor, 700);
             }
 
             & p {
-                font-size: $smallFont;
-                font-family: $secondFont;
-                color: $secondColor;
-                font-weight: 400;
+                @include font ($smallFont, $secondFont, $secondColor, 400);
             }
         }
 
@@ -47,8 +41,7 @@
         }
 
         & p {
-            color: $thirdColor;
-            font-size: $smallerFont;
+            @include font($size: $smallerFont, $color: $thirdColor);
             text-transform: uppercase;
             margin-top: 2rem;
         }

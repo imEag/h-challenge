@@ -14,9 +14,9 @@ const AddressPage = (props) => {
                     <p>I can't find my address</p>
                 </form>
                 <div className="card--container">
+                    {/* <AddressCard></AddressCard>
                     <AddressCard></AddressCard>
-                    <AddressCard></AddressCard>
-                    <AddressCard></AddressCard>
+                    <AddressCard></AddressCard> */}
                 </div>
             </div>
             <div className="bottom--container">

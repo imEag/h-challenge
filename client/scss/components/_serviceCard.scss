@@ -5,7 +5,7 @@
     margin: 0 auto;
     width: 18rem;
     padding: 2rem 0;
-    
+
     @media only screen and (min-width: 440px) {
         & {
             gap: 2rem;
@@ -16,29 +16,21 @@
 
     & .title--container {
         & h3 {
-            font-family: $secondFont;
-            color: $secondColor;
-            font-size: $mediumFont;
+            @include font ($mediumFont, $secondFont, $secondColor, 700);
         }
 
         & p {
-            font-family: $firstFont;
-            color: $secondColor;
-            font-size: $smallerFont;
+            @include font ($smallerFont, $firstFont, $secondColor);
         }
     }
 
     & .x {
-        font-family: $firstFont;
-        color: #beb502;
-        font-size: $smallFont;
+        @include font ($smallFont, $firstFont, #beb502, 700);
     }
 
     & .number {
         @include flexCenter2Axis;
-        color: $firstColor;
-        font-size: $bigFont;
-        font-weight: 700;
+        @include font ($bigFont, $firstFont, $firstColor, 700);
         margin-left: 0rem;
 
         &::before {
