@@ -47,7 +47,14 @@
         text-transform: uppercase;
         cursor: text;
 
-        @media only screen and (min-width: 360px) {
+
+        @media only screen and (min-width: 320px) {
+            & {
+                font-size: $tinyFont;
+            }
+        }
+
+        @media only screen and (min-width: 380px) {
             & {
                 font-size: $smallerFont;
             }
