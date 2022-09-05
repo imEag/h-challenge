@@ -3,14 +3,12 @@ const ServiceCard = (props) => {
     return (
         <div className="serviceCard">
             <div className="title--container">
-                <h3>Basic</h3>
+                <h3>{props.service || "Service"}</h3>
                 <p>Service</p>
             </div>
             <p className="x">x</p>
-            <div className="number">30</div>
-            <div className="check">
-
-            </div>
+            <div className="number">{props.price || "Not available"}</div>
+            <input required type="radio" value={props.price || 0} name={props.radioName}></input>
         </div>
     )
 }

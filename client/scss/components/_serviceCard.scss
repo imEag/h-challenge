@@ -46,10 +46,11 @@
         }
     }
 
-    & .check {
+    & input {
         border: 0.1rem solid $thirdColor;
         border-radius: 50%;
         height: 2.5rem;
         width: 2.5rem;
+        cursor: pointer;
     }
 }

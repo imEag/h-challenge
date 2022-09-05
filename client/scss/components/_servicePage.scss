@@ -15,7 +15,7 @@
         @include font ($mediumFont, $secondFont, $secondColor, 700);
     }
 
-    & .service--container {
+    & form {
         @include flexCenter2Axis;
         gap: 1rem;
         flex-wrap: wrap;
