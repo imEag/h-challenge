@@ -5,9 +5,11 @@
 
     & .upper--container {
         @include flexColumnSpaceBetween;
-        gap: 4rem;
+        gap: 6rem;
 
         & .upper__title--container {
+            @include flexColumnSpaceBetween;
+            gap: 3rem;
 
             & h2 {
                 font-size: $mediumFont;
@@ -20,7 +22,7 @@
                 font-size: $smallFont;
                 font-family: $secondFont;
                 color: $secondColor;
-                font-weight: 700;
+                font-weight: 400;
             }
         }
 
@@ -29,14 +31,26 @@
             @include flexColumnSpaceBetween;
             gap: 1.4rem;
             width: 100%;
+
+            & p {
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
     }
 
 
-    & .bottom--container p {
-        color: $thirdColor;
-        font-size: $smallerFont;
-        text-transform: uppercase;
-        margin-top: 2rem;
+    & .bottom--container {
+
+        & button {
+            padding: 2.2rem 4rem;
+        }
+
+        & p {
+            color: $thirdColor;
+            font-size: $smallerFont;
+            text-transform: uppercase;
+            margin-top: 2rem;
+        }
     }
 }
