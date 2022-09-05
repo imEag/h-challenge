@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { PageContext } from "./context/PageContext";
+import { UserDataContext } from "./context/UserDataContext";
 
 import WelcomePage from './WelcomePage';
 import NamesPage from './NamesPage';
@@ -8,19 +10,21 @@ import SubscribePage from './SubscribePage';
 
 const App = () => {
 
-    const [page, setPage] = useState(0);
-    const pages = [];
+    const { page, setPage } = useContext(PageContext);
+    const { userData, setUserData } = useContext(UserDataContext);
+
+    useEffect(() => {
+        console.log('user context: ', userData);
+        console.log('page context: ', page);
+    }, [])
 
     return (
         <>
-            <ServicePage></ServicePage>
-            {/* 
             <WelcomePage></WelcomePage>
             <NamesPage></NamesPage>
             <AddressPage name="Cristian"></AddressPage>
+            <ServicePage></ServicePage>
             <SubscribePage></SubscribePage>
-            
-            */}
         </>
     )
 }
