@@ -38,6 +38,7 @@ const AddressPage = (props) => {
                         type="text"
                         id="address"
                         name="address"
+                        autoComplete="off"
                         required={true}
                         label="Please type in your street address"
                         placeholder="Street Address, City, State">
@@ -49,6 +50,7 @@ const AddressPage = (props) => {
                         type="text"
                         id="aptNum"
                         name="aptNum"
+                        autoComplete="off"
                         required={true}
                         label="Apt #"
                         placeholder="Apt #">

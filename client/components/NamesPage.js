@@ -38,6 +38,7 @@ const NamesPage = () => {
                         id="name"
                         name="name"
                         required={true}
+                        autoComplete="off"
                         label="First Name">
                     </Input>
                     <Input
@@ -46,6 +47,7 @@ const NamesPage = () => {
                         type="text"
                         id="lastname"
                         name="lastname"
+                        autoComplete="off"
                         label="Last Name">
                     </Input>
                 </form>

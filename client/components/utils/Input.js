@@ -8,6 +8,7 @@ const Input = (props) => {
                 type={props.type || "text"}
                 name={props.name || ""}
                 id={props.id || "text1"}
+                autoComplete={props.autoComplete || "on"}
                 placeholder={props.placeholder || props.label}>
             </input>
 
