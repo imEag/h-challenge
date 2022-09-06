@@ -14,6 +14,7 @@ const AddressPage = (props) => {
     const [address, setAddress] = useState("");
     const [aptNum, setAptNum] = useState("");
     const [buildings, setBuildings] = useState([]);
+    const [selected, setSelected] = useState(false);
 
     const fetchBuildings = async query => {
         if (query == "") return [];
@@ -49,12 +50,17 @@ const AddressPage = (props) => {
     }
 
     const handleSelect = building => {
-        console.log(building);
         let buildingAddress = `${building.address}, ${building.city}, ${building.state}, ${building.postal}`
+        
         setAddress(buildingAddress);
-
+        setSelected(true);
         setBuildings([building])
+    }
 
+    const handleClose = () => {
+        setAddress("");
+        setSelected(false);
+        setBuildings([]);
     }
 
     return (
@@ -72,7 +78,6 @@ const AddressPage = (props) => {
                         required={true}
                         label="Please type in your street address"
                         placeholder="Street Address, City, State">
-
                     </Input>
                     <Input
                         value={aptNum}
@@ -84,7 +89,6 @@ const AddressPage = (props) => {
                         required={true}
                         label="Apt #"
                         placeholder="Apt #">
-
                     </Input>
                     <p>I can't find my address</p>
                 </form>
@@ -102,6 +106,8 @@ const AddressPage = (props) => {
                                             state={building.state}
                                             postal={building.postal}
                                             onSelect={() => handleSelect(building)}
+                                            onClose={handleClose}
+                                            selected={selected}
                                         ></AddressCard>
                                     )
                                 })

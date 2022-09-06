@@ -9,7 +9,11 @@ const AddressCard = (props) => {
                 <h3>{props.name || ""}</h3>
                 <p>{props.address || ""}, {props.city || ""}, {props.state || ""}, {props.postal || ""}</p>
             </div>
-            <Button onClick={props.onSelect}>Select</Button>
+            {
+                props.selected
+                    ? <img className="closeButton" onClick={props.onClose} src={closeImg} />
+                    : <Button onClick={props.onSelect}>Select</Button>
+            }
         </div>
     )
 }
