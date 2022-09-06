@@ -52,6 +52,9 @@ const AddressPage = (props) => {
         console.log(building);
         let buildingAddress = `${building.address}, ${building.city}, ${building.state}, ${building.postal}`
         setAddress(buildingAddress);
+
+        setBuildings([building])
+
     }
 
     return (
@@ -98,7 +101,7 @@ const AddressPage = (props) => {
                                             city={building.city}
                                             state={building.state}
                                             postal={building.postal}
-                                            onClick={() => handleSelect(building)}
+                                            onSelect={() => handleSelect(building)}
                                         ></AddressCard>
                                     )
                                 })
