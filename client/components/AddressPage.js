@@ -9,18 +9,19 @@ import Input from "./utils/Input";
 
 const AddressPage = (props) => {
     const { page, setPage } = useContext(PageContext);
-    const { userData, setUserData } = useContext(UserDataContext);
+    const { setUserData } = useContext(UserDataContext);
 
     const [address, setAddress] = useState("");
     const [aptNum, setAptNum] = useState("");
-    const [query, setQuery] = useState("");
     const [buildings, setBuildings] = useState([]);
 
     const fetchBuildings = async query => {
+        if (query == "") return [];
+        
         let params = { query };
         try {
             let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
-            setBuildings(data.data);
+            return data.data;
         } catch (error) {
             console.log(error)
         }
@@ -39,14 +40,13 @@ const AddressPage = (props) => {
         setPage(page + 1);
     }
 
-    const handleAddressChange = (evt) => {
-        setAddress(evt.target.value);
-        setQuery(evt.target.value);
-        query ? fetchBuildings(query) : null;
-    }
+    const handleAddressChange = async (evt) => {
+        let searchQuery = evt.target.value;
+        setAddress(searchQuery);
 
-    useEffect(() => {
-    }, [query])
+        let searchResult = await fetchBuildings(searchQuery);
+        setBuildings(searchResult);
+    }
 
     return (
         <div className="addressPage container">
@@ -80,7 +80,7 @@ const AddressPage = (props) => {
                     <p>I can't find my address</p>
                 </form>
                 {
-                    query ?
+                    buildings.length != 0 ?
                         <div className="card--container">
                             {
                                 buildings.map(building => {
