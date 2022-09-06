@@ -21,7 +21,7 @@ const AddressPage = (props) => {
 
         let params = { query };
         try {
-            let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
+            let { data } = await axios.get('http://imeag.site/server/buildings', { params });
             return data.data;
         } catch (error) {
             return [];
