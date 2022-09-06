@@ -12,7 +12,7 @@
         }
 
         & p {
-            @include font($size: $smallFont, $color: $secondColor);
+            @include font($size: $smallFont, $color: $secondColor, $weight: 700);
         }
     }
 }

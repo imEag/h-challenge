@@ -16,7 +16,7 @@ const SummaryPage = () => {
             <div className="upper--container">
                 <h2>Your summary</h2>
                 <p>{`Name: ${userData.name} ${userData.lastName}`}</p>
-                <p>{`Address: ${userData.address}`}</p>
+                <p>{`Address: ${userData.address} Apt: ${userData.aptNum}`}</p>
                 <p>{`Email: ${userData.email}`}</p>
                 <p>{`Phone number: ${userData.phoneNum}`}</p>
                 <p>{`Requested service: ${userData.service}`}</p>

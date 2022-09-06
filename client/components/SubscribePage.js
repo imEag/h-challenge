@@ -8,7 +8,7 @@ import Button from "./utils/Button";
 const SubscribePage = () => {
 
     const { page, setPage } = useContext(PageContext);
-    const { userData, setUserData } = useContext(UserDataContext);
+    const { setUserData } = useContext(UserDataContext);
 
     const [email, setEmail] = useState("");
     const [phoneNum, setPhoneNum] = useState("");
