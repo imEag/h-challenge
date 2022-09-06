@@ -17,7 +17,7 @@ const AddressPage = (props) => {
 
     const fetchBuildings = async query => {
         if (query == "") return [];
-        
+
         let params = { query };
         try {
             let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
@@ -46,6 +46,12 @@ const AddressPage = (props) => {
 
         let searchResult = await fetchBuildings(searchQuery);
         setBuildings(searchResult);
+    }
+
+    const handleSelect = building => {
+        console.log(building);
+        let buildingAddress = `${building.address}, ${building.city}, ${building.state}, ${building.postal}`
+        setAddress(buildingAddress);
     }
 
     return (
@@ -92,6 +98,7 @@ const AddressPage = (props) => {
                                             city={building.city}
                                             state={building.state}
                                             postal={building.postal}
+                                            onClick={() => handleSelect(building)}
                                         ></AddressCard>
                                     )
                                 })
