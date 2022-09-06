@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "build": "./node_modules/.bin/webpack -w",
     "import": "node server/utils/seeding.js -i",
     "delete": "node server/utils/seeding.js -d"
