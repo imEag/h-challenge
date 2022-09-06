@@ -24,6 +24,7 @@ const AddressPage = (props) => {
             let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
             return data.data;
         } catch (error) {
+            return [];
             console.log(error)
         }
     };
