@@ -28,9 +28,12 @@
         & .card--container {
             @include flexColumnSpaceBetween;
             position: absolute;
+            max-height: 39rem;
+            overflow-y: scroll;
             top: 95%;
             width: 100%;
             gap: 1rem;
+            border-radius: 0.8rem;
         }
     }
 

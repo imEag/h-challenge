@@ -6,7 +6,7 @@
     background-color: $fourthColor;
     gap: .8rem;
     padding: 1.4rem;
-    height: 9rem;
+    min-height: 9rem;
 
     & .left--container {
         display: flex;
@@ -35,8 +35,7 @@
     & Button {
         @include font($size: $smallerFont, $weight: 500, $color: #FFFFFF);
         margin: 0;
-        padding: 0rem 2rem;
-        height: 90%;
+        padding: 2rem 2rem;
 
         @media only screen and (min-width: 320px) {
             & {

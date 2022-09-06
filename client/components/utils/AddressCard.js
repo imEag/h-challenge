@@ -1,12 +1,12 @@
 import Button from "./Button";
 
-const AddressCard = () => {
+const AddressCard = (props) => {
 
     return (
         <div className="addressCard">
             <div className="left--container">
-                <h3>Magnolia Dumbo</h3>
-                <p>135 York Street, Brooklyn, NY, 11201</p>
+                <h3>{props.name || ""}</h3>
+                <p>{props.address || ""}, {props.city || ""}, {props.state || ""}, {props.postal || ""}</p>
             </div>
             <Button>Select</Button>
         </div>

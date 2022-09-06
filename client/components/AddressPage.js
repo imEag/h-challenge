@@ -83,12 +83,16 @@ const AddressPage = (props) => {
                     query ?
                         <div className="card--container">
                             {
-                                buildings.map(el => {
+                                buildings.map(building => {
                                     return (
-                                        <div key={el._id}>
-                                            <h1>{el.name}</h1>
-                                            <p>{el.addres}</p>
-                                        </div>
+                                        <AddressCard
+                                            key={building._id}
+                                            name={building.name}
+                                            address={building.address}
+                                            city={building.city}
+                                            state={building.state}
+                                            postal={building.postal}
+                                        ></AddressCard>
                                     )
                                 })
                             }
