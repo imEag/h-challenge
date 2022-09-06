@@ -49,7 +49,7 @@ const SubscribePage = () => {
                         type="number"
                         id="phone"
                         name="phone"
-                        required={false}
+                        required={true}
                         label="Phone number">
                     </Input>
                     <p>I have a promo code!</p>

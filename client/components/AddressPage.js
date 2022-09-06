@@ -9,7 +9,7 @@ import Input from "./utils/Input";
 
 const AddressPage = (props) => {
     const { page, setPage } = useContext(PageContext);
-    const { setUserData } = useContext(UserDataContext);
+    const { userData, setUserData } = useContext(UserDataContext);
 
     const [address, setAddress] = useState("");
     const [aptNum, setAptNum] = useState("");
@@ -66,7 +66,7 @@ const AddressPage = (props) => {
     return (
         <div className="addressPage container">
             <div className="upper--container">
-                <h2>Pleasure to meet you, {props.name}!<br />What is your install address?</h2>
+                <h2>Pleasure to meet you, {userData.name || ""}!<br />What is your install address?</h2>
                 <form id="addressForm" onSubmit={handleSubmit}>
                     <Input
                         value={address}
