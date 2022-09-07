@@ -25,7 +25,7 @@
     }
 
     & .x {
-        @include font ($smallFont, $firstFont, #beb502, 700);
+        @include font (3rem, $xFont, #beb502, 700);
     }
 
     & .number {
