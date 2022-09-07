@@ -17,7 +17,7 @@ h-challenge is a full-stack app, the project has a client and a server folder. b
 
 ### Front End
 
-The front-end side of the application was built using React as Javascript framework and SCSS as CSS library to manage styles. 
+The front-end side of the application was built using React as Javascript framework and SCSS as CSS library to manage styles. The page is completely responsive.
 
 The app is divided into several components, many of them are reusable. There were implemented good practices and a very clean code.
 
