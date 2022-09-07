@@ -13,7 +13,7 @@ At the end of the process, the user gets a summary of the information given.
 
 ## technical details
 
-h-challenge is a full-stack app, the project has a client and a server folder. both front-end and back-end run in the same server in a Digital Ocean droplet, this was achieved using webpack.
+h-challenge is a full-stack app, the project has a client and a server folder. Both front-end and back-end running in the same server in a Digital Ocean droplet. The app is loaded using babel and webpack.
 
 ### Front End
 
