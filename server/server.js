@@ -1,12 +1,14 @@
 const express = require('express');
 const buildingHandler = require('./building/buildinghandler');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 require('dotenv').config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/'));
