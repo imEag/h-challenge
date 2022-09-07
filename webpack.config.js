@@ -5,7 +5,7 @@ const path = require('path');
 const BUILD_DIR = path.resolve(__dirname, './public/build');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './client/index.js',
   output: {
     path: BUILD_DIR,
