@@ -31,7 +31,7 @@ To make https request to the server, axios library was used.
 
 The back-end side was made using Node.js, Express and more libraries. 
 
-It can be accessed through an API REST in https://imeag.site/server/buildings, a query parameter must be passed.
+It can be accessed through an API REST, a query parameter must be passed.
 
 A get request example is https://imeag.site/server/buildings?query=Chelsea
 
