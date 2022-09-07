@@ -15,4 +15,8 @@
             @include font($size: $smallFont, $color: $secondColor, $weight: 700);
         }
     }
+
+    & button {
+        padding: 2.2rem 6rem;
+    }
 }
