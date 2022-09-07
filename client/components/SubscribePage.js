@@ -13,6 +13,20 @@ const SubscribePage = () => {
     const [email, setEmail] = useState("");
     const [phoneNum, setPhoneNum] = useState("");
 
+    const handleNumberchange = (evt) => {
+        let number = evt.target.value
+        setPhoneNum(formatPhoneNumber(number));
+    }
+
+    const formatPhoneNumber = phoneNumberString => {
+        var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+        var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return phoneNumberString;
+    }
+
     const handleSubmit = evt => {
         evt.preventDefault();
 
@@ -25,6 +39,7 @@ const SubscribePage = () => {
 
         setPage(page + 1);
     }
+
 
     return (
         <div className="subscribePage container">
@@ -45,8 +60,8 @@ const SubscribePage = () => {
                     </Input>
                     <Input
                         value={phoneNum}
-                        onChange={evt => setPhoneNum(evt.target.value)}
-                        type="number"
+                        onChange={handleNumberchange}
+                        type="text"
                         id="phone"
                         name="phone"
                         required={true}

@@ -45,6 +45,8 @@
     }
     
     & .closeButton {
+        filter: invert(25%) sepia(67%) saturate(7491%) hue-rotate(199deg) brightness(97%) contrast(101%);
         cursor: pointer;
+        margin-right: 1rem;
     }
 }

@@ -13,6 +13,7 @@
         padding: 2rem 2rem;
         border: none;
         background-color: transparent;
+        border-radius: 0.8rem;
         width: 100%;
         line-height: 2.4rem;
 
@@ -23,7 +24,6 @@
 
     }
 
-    &:hover,
     &:focus-within {
         border-color: $firstColor;
     }
@@ -46,7 +46,6 @@
         line-height: 2.4rem;
         text-transform: uppercase;
         cursor: text;
-
 
         @media only screen and (min-width: 320px) {
             & {
@@ -81,4 +80,15 @@
             color: transparent;
         }
     }
+
+    & input:disabled,
+    & input:disabled:hover {
+        background-color: $fifthColor;
+        color: $thirdColor;
+    }
+
+    & input:disabled+label {
+        display: none;
+    }
+
 }

@@ -5,6 +5,12 @@
     margin: 0 auto;
     width: 18rem;
     padding: 2rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        @include blueShadowBig;
+    }
 
     @media only screen and (min-width: 440px) {
         & {
@@ -16,7 +22,7 @@
 
     & .title--container {
         & h3 {
-            @include font ($mediumFont, $secondFont, $secondColor, 700);
+            @include font ($mediumBigFont, $secondFont, $secondColor, 700);
         }
 
         & p {
@@ -25,7 +31,7 @@
     }
 
     & .x {
-        @include font ($smallFont, $firstFont, #beb502, 700);
+        @include font (3rem, $xFont, #beb502, 700);
     }
 
     & .number {
@@ -53,4 +59,5 @@
         width: 2.5rem;
         cursor: pointer;
     }
+
 }

@@ -1,7 +1,7 @@
 const ServiceCard = (props) => {
 
     return (
-        <div className="serviceCard">
+        <label htmlFor={props.service} className="serviceCard">
             <div className="title--container">
                 <h3>{props.service || "Service"}</h3>
                 <p>Service</p>
@@ -13,9 +13,10 @@ const ServiceCard = (props) => {
                 required
                 type="radio"
                 value={props.service || "Unknown"}
-                name={props.radioName}>
-            </input>
-        </div>
+                name={props.radioName}
+                id={props.service}
+                ></input>
+        </label>
     )
 }
 

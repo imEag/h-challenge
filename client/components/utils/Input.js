@@ -1,6 +1,7 @@
 const Input = (props) => {
+
     return (
-        <div className="Input">
+        <div className="Input"  >
             <input
                 value={props.value}
                 onChange={props.onChange}
@@ -9,10 +10,11 @@ const Input = (props) => {
                 name={props.name || ""}
                 id={props.id || "text1"}
                 autoComplete={props.autoComplete || "on"}
-                placeholder={props.placeholder || props.label}>
-            </input>
+                placeholder={props.placeholder || props.label}
+                disabled={props.selected}
+            ></input>
 
-            {props.label ? <label htmlFor={props.id || "text1"} >{props.label}</label> : null}
+            {props.label ? <label disabled={props.selected} htmlFor={props.id || "text1"} >{props.label}</label> : null}
         </div >
     );
 }
