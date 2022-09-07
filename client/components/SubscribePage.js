@@ -61,7 +61,7 @@ const SubscribePage = () => {
                     <Input
                         value={phoneNum}
                         onChange={handleNumberchange}
-                        type="text"
+                        type="tel"
                         id="phone"
                         name="phone"
                         required={true}
