@@ -21,7 +21,7 @@ const AddressPage = (props) => {
 
         let params = { query };
         try {
-            let { data } = await axios.get('https://imeag.site/server/buildings', { params });
+            let { data } = await axios.get('http://localhost:5000/server/buildings', { params });
             return data.data;
         } catch (error) {
             return [];
@@ -78,8 +78,9 @@ const AddressPage = (props) => {
                         autoComplete="off"
                         required={true}
                         label="Please type in your street address"
-                        placeholder="Street Address, City, State">
-                    </Input>
+                        placeholder="Street Address, City, State"
+                        selected={selected}
+                        ></Input>
                     <Input
                         value={aptNum}
                         onChange={evt => setAptNum(evt.target.value)}
@@ -89,8 +90,8 @@ const AddressPage = (props) => {
                         autoComplete="off"
                         required={true}
                         label="Apt #"
-                        placeholder="Apt #">
-                    </Input>
+                        placeholder="Apt #"
+                        ></Input>
                     <p>I can't find my address</p>
                 </form>
                 {
